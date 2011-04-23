@@ -114,7 +114,10 @@ INSTALLED_APPS = (
     'django.contrib.admin',
     'django.contrib.admindocs',
     'django_extensions',
+    
     'barracuda.logistics',
+    'barracuda.finances',
+    'barracuda.entities'
 )
 
 # A sample logging configuration. The only tangible logging
