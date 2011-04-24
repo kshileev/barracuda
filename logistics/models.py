@@ -68,7 +68,7 @@ class Customs(models.Model):
     address = models.CharField(verbose_name = 'адрес', max_length = 512)
 
     def __unicode__(self):
-        return self.number
+        return u'{0}'.format(self.number)
 
 class CCD(models.Model):
     class Meta:
@@ -80,7 +80,7 @@ class CCD(models.Model):
 
     customs = models.ForeignKey(Customs, verbose_name='таможня')
     date = models.DateField(verbose_name = 'дата')
-    unique_number = models.CharField(verbose_name = 'номер', max_length = 8, unique = True)
+    unique_number = models.IntegerField(verbose_name = 'номер ГТД', max_length = 8, unique=True)
 
     exporter = models.ForeignKey(LegalEntity, verbose_name = 'экспортер', related_name='exporter')
     importer = models.ForeignKey(LegalEntity, verbose_name = 'импортер', related_name='importer')
@@ -89,13 +89,13 @@ class CCD(models.Model):
     truck = models.CharField(verbose_name='машина', max_length = 10)
     
     currency = models.CharField(verbose_name='валюта', max_length = 3, choices = CURRENCY)
-    total_sum = models.DecimalField(verbose_name = 'общая сумма по счету', max_digits = 11, decimal_places = 4)
-    exchange_rate = models.DecimalField(verbose_name = 'курс валюты', max_digits = 5, decimal_places = 4)
+    total_sum = models.DecimalField(verbose_name = 'общая сумма по счету', max_digits = 10, decimal_places = 2)
+    exchange_rate = models.DecimalField(verbose_name = 'курс валюты', max_digits = 7, decimal_places = 4)
 
-    corrected_cost = models.DecimalField(verbose_name = 'КТС', max_digits = 11, decimal_places = 4)
+    corrected_cost = models.DecimalField(verbose_name = 'КТС', max_digits = 10, decimal_places = 2)
 
     def __unicode__(self):
-        return u'ГТД {0}/{1}/{2}'.format(self.customs, self.date, self.unique_number)
+        return u'{0}/{1}/{2}'.format(self.customs, self.date, self.unique_number)
 
 class CargoExpenseType(models.Model):
     class Meta:
