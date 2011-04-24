@@ -47,6 +47,9 @@ class ConveyancePoint(models.Model):
     location = models.CharField(verbose_name = 'страна', max_length = 4, choices = COUNTRIES)
     type = models.CharField(verbose_name ='тип', max_length = 4, choices = POINTS)
 
+    def __unicode__(self):
+        return u'{0} {1}'.format(self.type, self.timestamp)
+
 class Warehouse(models.Model):
     class Meta:
         verbose_name = 'склад'
