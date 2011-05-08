@@ -1,0 +1,60 @@
+{% extends 'base.html' %}
+
+{% block menu_js %}
+	<link rel="stylesheet" type="text/css" href='{{ STATIC_URL }}css/jqueryslidemenu.css' />
+	<script type="text/javascript" src='{{ STATIC_URL }}js/jquery/jqueryslidemenu.js'></script>
+    <script type="text/javascript">
+    jqueryslidemenu.buildmenu("barracuda_menu", {down:['downarrowclass', '{{ STATIC_URL }}img/down.gif', 23], right:['rightarrowclass', '{{ STATIC_URL }}img/right.gif']});
+    </script>
+{% endblock %}
+
+{% block menu %}
+<div id="barracuda_menu" class="jqueryslidemenu">
+    <ul>
+        <li><a href="#">Авторизация</a>
+            <ul>
+                <li><a href="#">Группы</a></li>
+                <li><a href="#">Пользователи</a></li>
+                <li><a href="/admin/">Админка</a></li>
+            </ul>
+        </li>
+        <li><a href="#">Финансы</a>
+            <ul>
+                <li><a href="#">Счета</a></li>
+                <li><a href="#">Транзакции</a></li>
+                <li><a href="#">Касса</a></li>
+            </ul>
+        </li>
+        <li><a href="#">Логистика</a>
+            <ul>
+                <li><a href="ccds/">ГТД</a></li>
+                <li><a href="#">Грузы и клиенты</a></li>
+                <li><a href="#">Перевозки</a></li>
+                <li><a href="#">Погрузки</a></li>
+            </ul>
+        </li>
+        <li><a href="#">Справочники</a>
+            <ul>
+                <li><a href="#">Банки</a></li>
+                <li><a href="#">Счета</a></li>
+                <li><a href="#">Юрлица</a></li>
+                <li><a href="warehouses/">Склады</a></li>
+                <li><a href="customs/">Таможни</a></li>
+            </ul>
+        </li>
+        <li><a href="#">Другие направления</a>
+            <ul>
+                <li><a href="#">Оффис и аренда</a></li>
+                <li><a href="#">Банк интерфейс</a>
+                    <ul>
+                        <li><a href="#">Зарплата</a></li>
+                        <li><a href="#" onclick="alert('hello')">Хозрасходы</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Магазин</a></li>
+            </ul>
+        </li>
+    </ul>
+    <br style="clear: left"/>
+</div>
+{% endblock %}
