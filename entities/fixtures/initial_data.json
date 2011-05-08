@@ -1,0 +1,20 @@
+[
+    {
+        "pk": 1,
+        "model": "entities.legalentity",
+        "fields": {
+            "address": "\u0421\u0418\u041d\u0413\u0410\u041f\u0423\u0420,116 CHANGI ROAD, SIM GIAP BUILDING",
+            "type": "BAFO",
+            "title": "IDALION(SINGAPORE)PTE. LTD"
+        }
+    },
+    {
+        "pk": 2,
+        "model": "entities.legalentity",
+        "fields": {
+            "address": "\u0420\u041e\u0421\u0421\u0418\u042f, 129226, \u0413. \u041c\u041e\u0421\u041a\u0412\u0410, 2-\u0419 \u0421\u0415\u041b\u042c\u041a\u041e\u0425\u041e\u0417\u042f\u0419\u0421\u0422\u0412\u0415\u041d\u041d\u042b\u0419 \u041f\u0420-\u0414, 6-2",
+            "type": "BARU",
+            "title": "\u041e\u041e\u041e \"\u0410\u0417\u0418\u041c\u0423\u0422\""
+        }
+    }
+]
