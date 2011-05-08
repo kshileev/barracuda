@@ -1,4 +1,11 @@
 {% extends 'menu.html' %}
 {% block title %}Список Складов{% endblock %}
 {% block name %}Склады{% endblock %}
-{% block content %}<h1> ЦФКУРЩГЫУЫ </h1>{% endblock %}
+{% block content %}
+    <h2>Склады</h2>
+    <ul>
+        {% for warehouse in warehouses_list %}
+            <li>{{ warehouse.name }}</li>
+        {% endfor %}
+    </ul>
+{% endblock %}
