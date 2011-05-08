@@ -1,0 +1,11 @@
+{% extends 'menu.html' %}
+{% block title %}Список Таможен{% endblock %}
+{% block name %}Таможни{% endblock %}
+{% block content %}
+    <h2>Таможни</h2>
+    <ul>
+        {% for customs in customs_list %}
+            <li>{{ customs.name }}</li>
+        {% endfor %}
+    </ul>
+{% endblock %}
