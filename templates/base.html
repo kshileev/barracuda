@@ -2,9 +2,48 @@
 <html>
 <head>
     <title>{% block title %}{% endblock %}</title>
+
+    <link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}css/main_style.css" />
+    <script type="text/javascript" src="{{ STATIC_URL }}js/jquery/jquery-1.4.2.min.js"></script>
+    {% block menu_js %}{% endblock %}
 </head>
 <body>
-    <img src="{{ STATIC_URL }}images/barracuda.gif" alt="Logo" />
-    {% block content %}{% endblock %}
+
+<div id="top-bar">
+    <img src="{{ STATIC_URL }}img/logo.png" alt="DZone" class="floatleft"/>
+    {% block name %}{% endblock %}
+
+    <div id="right-side">
+        <img src="{{ STATIC_URL }}img/usericon.jpg" alt="user icon"/>&ensp;
+        <a href="#" class="first">User Name</a>&ensp;
+        <a href="#">Logout</a> &emsp;
+        <form id="main-search">
+            <label for="search-field" id="search-field-label">Search</label>
+            <input type="text" tabindex="1" maxlength="255" id="search-field"/>
+            <input type="image" alt="Search" value="Search" src="{{ STATIC_URL }}img/search.png" id="search-button"/>
+        </form>
+    </div>
+</div>
+
+{% block menu %}{% endblock %}
+
+<div id="main-content">
+    <div id="feature-content">
+
+        <div id="feature-left">
+            {% block content %}{% endblock %}
+        </div>
+
+        <div id="feature-right">
+            <img src="{{ STATIC_URL }}img/barracuda.gif" alt="Logo" />
+        </div>
+        <div class="clear"></div>
+    </div>
+</div>
+
+<div id="footer">
+    &copy;2011 by Unknowns Ltd.
+</div>
+
 </body>
 </html>
