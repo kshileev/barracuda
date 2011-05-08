@@ -12,5 +12,5 @@ urlpatterns = patterns('',
     url(r'^admin/doc/', include('django.contrib.admindocs.urls')),    
     url(r'^admin/', include(admin.site.urls)),
     url(r'^logistics/', include('logistics.urls')),
-    url(r'^about/', direct_to_template, {'template':'about.html'})
+    url(r'^about/$', direct_to_template, {'template':'about.html'})
 )
