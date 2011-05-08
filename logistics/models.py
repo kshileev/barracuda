@@ -75,7 +75,7 @@ class Customs(models.Model):
     url = models.URLField(verbose_name='ссылка',max_length=100)
     
     def __unicode__(self):
-        return u'{0}'.format(self.number)
+        return u'{0} {1}'.format(self.name,self.number)
 
 class CCD(models.Model):
     class Meta:
@@ -102,7 +102,7 @@ class CCD(models.Model):
     corrected_cost = models.DecimalField(verbose_name = 'КТС', max_digits = 10, decimal_places = 2)
 
     def __unicode__(self):
-        return u'{0}/{1}/{2}'.format(self.customs, self.date, self.unique_number)
+        return u'{}/{:%d%m%y}/{:07d}'.format(self.customs, self.date, self.unique_number)
 
 class CargoExpenseType(models.Model):
     class Meta:
