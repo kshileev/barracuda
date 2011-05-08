@@ -57,6 +57,7 @@ class Warehouse(models.Model):
 
     name = models.CharField(verbose_name = 'название', max_length = 255)
     address = models.CharField(verbose_name = 'адрес', max_length = 512)
+    phone = models.CharField(verbose_name = 'телефон', max_length = 45)
 
     def __unicode__(self):
         return self.name
@@ -69,7 +70,10 @@ class Customs(models.Model):
     number = models.IntegerField(verbose_name='идентификатор', max_length=8)
     name = models.CharField(verbose_name = 'название', max_length = 255)
     address = models.CharField(verbose_name = 'адрес', max_length = 512)
-
+    phone = models.CharField(verbose_name = 'телефон', max_length = 40)
+    fax = models.CharField(verbose_name = 'факс', max_length = 40)
+    url = models.URLField(verbose_name='ссылка',max_length=100)
+    
     def __unicode__(self):
         return u'{0}'.format(self.number)
 
@@ -83,7 +87,7 @@ class CCD(models.Model):
 
     customs = models.ForeignKey(Customs, verbose_name='таможня')
     date = models.DateField(verbose_name = 'дата')
-    unique_number = models.IntegerField(verbose_name = 'номер ГТД', max_length = 8, unique=True)
+    unique_number = models.IntegerField(verbose_name = 'номер ГТД', max_length = 7, unique=True)
 
     exporter = models.ForeignKey(LegalEntity, verbose_name = 'экспортер', related_name='exporter')
     importer = models.ForeignKey(LegalEntity, verbose_name = 'импортер', related_name='importer')

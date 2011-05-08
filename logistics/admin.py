@@ -7,6 +7,7 @@ admin.site.register(models.CCD)
 admin.site.register(models.ConveyancePoint)
 admin.site.register(models.Conveyance)
 admin.site.register(models.Customs)
+admin.site.register(models.Warehouse)
 
 
 
