@@ -1,0 +1,11 @@
+{% extends 'menu.html' %}
+{% block title %}Перевозки{% endblock %}
+{% block name %}Перевозки{% endblock %}
+{% block content %}
+    <h2>Перевозки</h2>
+    <ul>
+        {% for conveyance in object_list %}
+            <li>{{ conveyance.car }}</li>
+        {% endfor %}
+    </ul>
+{% endblock %}
