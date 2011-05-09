@@ -3,9 +3,9 @@
         "pk": 1,
         "model": "logistics.conveyance",
         "fields": {
-            "comment": "",
+            "comment": "\u041d\u0435\u0442 \u043d\u0438\u043a\u0430\u043a\u043e\u0433\u043e \u043e\u0431\u044f\u0437\u0430\u0442\u0435\u043b\u044c\u043d\u043e\u0433\u043e \u0442\u0435\u043a\u0441\u0442\u0430",
             "is_active": true,
-            "idle_reason": "",
+            "idle_reason": "\u0432\u043e\u0434\u0438\u0442\u0435\u043b\u044c \u0441\u043f\u0438\u043b\u0441\u044f",
             "carrier": 2,
             "truck": "X710NC 150"
         }
@@ -19,6 +19,17 @@
             "idle_reason": "",
             "carrier": 1,
             "truck": "BN301GJ"
+        }
+    },
+    {
+        "pk": 3,
+        "model": "logistics.conveyance",
+        "fields": {
+            "comment": "",
+            "is_active": true,
+            "idle_reason": "",
+            "carrier": 2,
+            "truck": "C500CC177"
         }
     },
     {
@@ -69,6 +80,36 @@
             "conveyance": 1,
             "type": "UL",
             "location": "RU"
+        }
+    },
+    {
+        "pk": 6,
+        "model": "logistics.conveyancepoint",
+        "fields": {
+            "timestamp": "2011-05-05 19:08:59",
+            "conveyance": 2,
+            "type": "LOAD",
+            "location": "IT"
+        }
+    },
+    {
+        "pk": 7,
+        "model": "logistics.conveyancepoint",
+        "fields": {
+            "timestamp": "2011-05-09 06:00:00",
+            "conveyance": 2,
+            "type": "CSAR",
+            "location": "RU"
+        }
+    },
+    {
+        "pk": 8,
+        "model": "logistics.conveyancepoint",
+        "fields": {
+            "timestamp": "2011-05-09 19:12:19",
+            "conveyance": 3,
+            "type": "LOAD",
+            "location": "DE"
         }
     },
     {
@@ -153,6 +194,24 @@
         }
     },
     {
+        "pk": 2,
+        "model": "logistics.ccd",
+        "fields": {
+            "exporter": 1,
+            "total_sum": "10000",
+            "country": "DE",
+            "customs": 1,
+            "currency": "USD",
+            "importer": 2,
+            "conveyance": 2,
+            "truck": "BN301GJ",
+            "corrected_cost": "0",
+            "date": "2011-05-09",
+            "exchange_rate": "28.9897",
+            "unique_number": 123456
+        }
+    },
+    {
         "pk": 1,
         "model": "logistics.cargoexpensetype",
         "fields": {
@@ -185,6 +244,39 @@
         "model": "logistics.cargoexpensetype",
         "fields": {
             "name": "\u043f\u043b\u0430\u0442\u043d\u044b\u0439 \u043c\u043e\u0441\u0442"
+        }
+    },
+    {
+        "pk": 1,
+        "model": "logistics.cargoexpense",
+        "fields": {
+            "cargo": 1,
+            "amount": "57",
+            "type": 3,
+            "payment": "cash",
+            "currency": "EUR"
+        }
+    },
+    {
+        "pk": 2,
+        "model": "logistics.cargoexpense",
+        "fields": {
+            "cargo": 2,
+            "amount": "32",
+            "type": 3,
+            "payment": "cash",
+            "currency": "EUR"
+        }
+    },
+    {
+        "pk": 3,
+        "model": "logistics.cargoexpense",
+        "fields": {
+            "cargo": 2,
+            "amount": "140",
+            "type": 1,
+            "payment": "cash",
+            "currency": "EUR"
         }
     }
 ]
