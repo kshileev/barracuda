@@ -2,16 +2,17 @@ from django.conf.urls.defaults import patterns, include, url
 from django.views.generic.simple import direct_to_template
 from django.views.generic import list_detail
 from django.contrib import admin
-from django.contrib.auth.views import login
+from django.contrib.auth.views import login,logout
 admin.autodiscover()
 from logistics.models import Conveyance, Warehouse, Customs
 
 urlpatterns = patterns('',
     url(r'^admin/doc/', include('django.contrib.admindocs.urls')),
     url(r'^admin/', include(admin.site.urls)),
-    url(r'^about/$', direct_to_template, {'template':'about.html'}),
     url(r'^$', login),
-    url(r'^accounts/profile/$', 'core.views.after_login')
+    url(r'^accounts/profile/$', 'core.views.after_login'),
+    url(r'^logout/$', logout),
+    url(r'^about/$', direct_to_template, {'template':'about.html'})
 )
 
 urlpatterns += patterns('',
