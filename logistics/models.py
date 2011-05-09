@@ -8,6 +8,8 @@ COUNTRIES = (
     ('RU', 'Россия'),
     ('DE', 'Германия'),
     ('ND', 'Нидерланды'),
+    ('IT', 'Италия'),
+    ('GR', 'Греция'),
     ('US', 'США'),
     ('CN', 'Китай')
 )
@@ -120,7 +122,7 @@ class CargoExpense(models.Model):
         verbose_name_plural = 'расходы'
 
     cargo = models.ForeignKey(Conveyance, verbose_name = 'перевозка')
-    models.DecimalField(verbose_name = 'сумма', max_digits = 11, decimal_places = 4)
+    amount = models.DecimalField(verbose_name = 'сумма', max_digits = 11, decimal_places = 4)
     currency = models.CharField(verbose_name='валюта', max_length = 3, choices = CURRENCY)
     payment = models.CharField(verbose_name = 'нал/безнал', max_length = 4, choices = PAYMENT)
     type = models.ForeignKey(CargoExpenseType, verbose_name = 'статья расхода')

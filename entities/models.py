@@ -37,4 +37,4 @@ class Person(models.Model):
     type = models.CharField(verbose_name='тип', max_length=4, choices= PERSON_TYPE)
 
     def __unicode__(self):
-        return self.name
+        return u'{0} {1}'.format(self.type, self.name)
