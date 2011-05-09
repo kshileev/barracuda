@@ -1,3 +1,5 @@
 django
 django-admin-tools
 django-extensions
+django-piston
+django-countries
