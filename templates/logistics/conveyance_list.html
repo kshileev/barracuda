@@ -4,8 +4,8 @@
 {% block content %}
     <h2>Перевозки</h2>
     <ul>
-        {% for conveyance in object_list %}
-            <li>{{ conveyance.car }}</li>
+        {% for conveyance in conveyance_list %}
+            <li>{{ conveyance }}</li>
         {% endfor %}
     </ul>
 {% endblock %}
