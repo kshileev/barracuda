@@ -11,7 +11,9 @@ server {
 
 	location / {
 		fastcgi_pass localhost:3033;
-		# keep this
-		include /var/www/barracuda/etc/nginx-fastcgi_params;
+                fastcgi_param SERVER_PORT       $server_port;
+                fastcgi_param SERVER_PROTOCOL   $server_protocol;
+                fastcgi_param SERVER_NAME       $server_name;
+                fastcgi_param REQUEST_METHOD    $request_method;
 	}
 }
