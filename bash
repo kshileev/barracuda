@@ -1,6 +1,6 @@
 Barracuda=/root/barracuda
 Venv=/root/BaEnv
-Port=`grep  -oE "[0-9]+" $Barracuda\nginx`
+Port=`grep  -oE "[0-9]+" $Barracuda/nginx`
 
 function ba_create_venv () 
 { 
