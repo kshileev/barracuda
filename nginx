@@ -1,0 +1,17 @@
+server {
+	server_name barracuda.forpost-tech.org;
+
+	gzip off;
+
+	#rewrite ^/$ /admin/ permanent;
+
+	location /static {
+		alias /root/barracuda/static;
+	}
+
+	location / {
+		fastcgi_pass localhost:3033;
+		# keep this
+		include /var/www/barracuda/etc/nginx-fastcgi_params;
+	}
+}
