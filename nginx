@@ -1,14 +1,6 @@
 server {
 	server_name barracuda.forpost-tech.org;
 
-	gzip off;
-
-	#rewrite ^/$ /admin/ permanent;
-
-	location /static {
-		alias /root/barracuda/static;
-	}
-
 	location / {
 		fastcgi_pass localhost:3033;
                 fastcgi_param SERVER_PORT       $server_port;
