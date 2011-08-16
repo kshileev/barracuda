@@ -7,7 +7,7 @@ function ba_create_venv ()
     echo +++++++++++++++++++++PIP+++++++++++++++++++++++++++;
     echo +++++++++++++++++++++++++++++++++++++++++++++++++++;
     [ -d $Venv ] || virtualenv --no-site-packages $Venv;
-    $Venv/bin/pip install -r $Barracuda/pip_packages;
+    $Venv/bin/pip install -r $Barracuda/pip-requirements-deploy.txt;
     return $?
 }
 function ba_get_from_github () 
