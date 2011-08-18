@@ -13,7 +13,7 @@
         fields: ['truck', 'is_active', 'carrier', 'comment', 'idle_reason']
     });
 
-    var teamStore = new Ext.data.Store({
+    var store = new Ext.data.Store({
         model: 'Conveyances',
         sorters: ['truck','is_active'],
         groupField: 'is_active',
@@ -31,23 +31,26 @@
 
     var grid = new Ext.grid.Panel({
         renderTo: 'grid1',
-        store: teamStore,
-        width: 700,
+        store: store,
+        width: 1000,
         height: 300,
         title: 'Перевозки',
         features: [{  ftype: 'grouping'}],
         columns: [
-                  { text: 'В пути?',flex: 1,  dataIndex: 'is_active'},
-                  { text: 'Машина',           dataIndex: 'truck'},
-                  { text: 'Перевозчик',       dataIndex: 'carrier'},
-                  { text: 'Простой',          dataIndex: 'idle_reason'},
-                  { text: 'Коментарий',       dataIndex: 'comment'}
-                 ]
+                  { text: 'В пути?'   , dataIndex: 'is_active'},
+                  { text: 'Машина'    , dataIndex: 'truck'},
+                  { text: 'Перевозчик', dataIndex: 'carrier', width: 200},
+                  { text: 'Простой'   , dataIndex: 'idle_reason'},
+                  { text: 'Коментарий', dataIndex: 'comment'      , flex: 1, editor: 'textfield' }
+                 ],
+        selType: 'cellmodel',
+        plugins: [ Ext.create('Ext.grid.plugin.CellEditing', { clicksToEdit: 1})
+    ]
     });
 });
 </script>
 {% endblock %}
 
 {% block content %}
-    <div id="grid1"></div>
+    <div id="grid1" align="bottom"></div>
 {% endblock %}
