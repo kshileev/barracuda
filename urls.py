@@ -4,12 +4,13 @@ from django.contrib import admin
 from django.contrib.auth.views import login,logout
 admin.autodiscover()
 from logistics.models import Conveyance, Warehouse, Customs
+from django.contrib.auth.decorators import login_required
 
 urlpatterns = patterns('',
     url(r'^admin/doc/', include('django.contrib.admindocs.urls')),
     url(r'^admin/', include(admin.site.urls)),
-    url(r'^$', login),
-    url(r'^accounts/profile/$', 'core.views.after_login'),
+    url(r'^$', login_required(TemplateView.as_view(template_name='dashboard.html'))),
+    url(r'^accounts/login/$', login),
     url(r'^logout/$', logout),
     url(r'^about/$', TemplateView.as_view(template_name='about.html'))
 )
