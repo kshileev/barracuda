@@ -106,7 +106,7 @@ MIDDLEWARE_CLASSES = (
 
 ROOT_URLCONF = 'barracuda.urls'
 
-TEMPLATE_DIRS = ('/root/barracuda/templates',)
+TEMPLATE_DIRS = ('/root/barracuda/templates','/prj/barracuda/templates')
 
 INSTALLED_APPS = (
     'django.contrib.auth',
