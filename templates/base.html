@@ -14,14 +14,7 @@
     {% block name %}{% endblock %}
 
     <div id="right-side">
-        <img src="{{ STATIC_URL }}img/usericon.jpg" alt="user icon"/>&ensp;
-        <a href="#" class="first">User Name</a>&ensp;
-        <a href="/logout/">Logout</a> &emsp;
-        <form id="main-search">
-            <label for="search-field" id="search-field-label">Search</label>
-            <input type="text" tabindex="1" maxlength="255" id="search-field"/>
-            <input type="image" alt="Search" value="Search" src="{{ STATIC_URL }}img/search.png" id="search-button"/>
-        </form>
+        {% block user %}{% endblock %}
     </div>
 </div>
 
@@ -35,7 +28,7 @@
         </div>
 
         <div id="feature-right">
-            <img src="{{ STATIC_URL }}img/barracuda.gif" alt="Logo" />
+            <img src="{{ STATIC_URL }}img/barracuda.gif" alt="Logo" class="floatright" />
         </div>
         <div class="clear"></div>
     </div>

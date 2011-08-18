@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block user %}
+    <div id="right-side">
+        <img src="{{ STATIC_URL }}img/{{ user }}.jpg" alt="user icon"/>&ensp;
+        <a href="/user/{{ user }}/" class="first">{{ user.first_name }} {{ user.last_name }}</a>
+        <form id="main-search">
+            <label for="search-field" id="search-field-label">Search</label>
+            <input type="text" tabindex="1" maxlength="255" id="search-field"/>
+            <input type="image" alt="Search" value="Search" src="{{ STATIC_URL }}img/search.png" id="search-button"/>
+        </form>
+        <a href="/logout/">Logout</a>
+    </div>
+{% endblock %}
