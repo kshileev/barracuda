@@ -3,52 +3,63 @@
 {% block name %}Перевозки{% endblock %}
 {% block additional_js %}
     {{ block.super }}
-    <link rel="stylesheet" type="text/css" href='{{ STATIC_URL }}css/ext-all.css' />
+    <link rel="stylesheet" type="text/css" href='{{ STATIC_URL }}css/ext-all.css'/>
     <script type="text/javascript" src="{{ STATIC_URL }}js/extjs/ext-all.js"></script>
     <script type="text/javascript">
 
-    Ext.require(['Ext.grid.*', 'Ext.data.*', 'Ext.panel.*', 'Ext.layout.container.Border']);
-    Ext.onReady(function() {
-        Ext.define('Conveyances', { extend: 'Ext.data.Model',
-        fields: ['truck', 'is_active', 'carrier', 'comment', 'idle_reason']
-    });
+        Ext.require(['Ext.grid.*', 'Ext.data.*', 'Ext.panel.*']);
+        Ext.onReady(function() {
+            Ext.define('Conveyances', { extend: 'Ext.data.Model',
+                fields: ['truck', 'is_active', 'carrier', 'comment', 'idle_reason']
+            });
 
-    var store = new Ext.data.Store({
-        model: 'Conveyances',
-        sorters: ['truck','is_active'],
-        groupField: 'is_active',
-        data: [
-                {% for conveyance in conveyance_list %}
-                    { is_active:   '{{ conveyance.is_active }}',
-                      truck:       '{{ conveyance.truck }}',
-                      carrier:     '{{ conveyance.carrier }}',
-                      idle_reason: '{{ conveyance.idle_reason }}',
-                      comment:     '{{ conveyance.comment }}'
-                    },
-                {% endfor %}
-        ]
-    });
+            var store = new Ext.data.Store({
+                model: 'Conveyances',
+                sorters: ['truck','is_active'],
+                groupField: 'is_active',
+                data: [
+                    {% for conveyance in conveyance_list %}
+                        { is_active:   '{{ conveyance.is_active }}',
+                            truck:       '{{ conveyance.truck }}',
+                            carrier:     '{{ conveyance.carrier }}',
+                            idle_reason: '{{ conveyance.idle_reason }}',
+                            comment:     '{{ conveyance.comment }}'
+                        },
+                    {% endfor %}
+                ]
+            });
 
-    var grid = new Ext.grid.Panel({
-        renderTo: 'grid1',
-        store: store,
-        width: 1000,
-        height: 300,
-        title: 'Перевозки',
-        features: [{  ftype: 'grouping'}],
-        columns: [
-                  { text: 'В пути?'   , dataIndex: 'is_active'},
-                  { text: 'Машина'    , dataIndex: 'truck'},
-                  { text: 'Перевозчик', dataIndex: 'carrier', width: 200},
-                  { text: 'Простой'   , dataIndex: 'idle_reason'},
-                  { text: 'Коментарий', dataIndex: 'comment'      , flex: 1, editor: 'textfield' }
-                 ],
-        selType: 'cellmodel',
-        plugins: [ Ext.create('Ext.grid.plugin.CellEditing', { clicksToEdit: 1})
-    ]
-    });
-});
-</script>
+            var edt = Ext.create('Ext.grid.plugin.RowEditing');
+
+            var grid = new Ext.grid.Panel({
+                renderTo: 'grid1',
+                store: store,
+                width: 1000,
+                height: 300,
+                title: 'Перевозки',
+                features: [
+                    {  ftype: 'grouping'}
+                ],
+                columns: [
+                    { text: 'В пути?'   , dataIndex: 'is_active'},
+                    { text: 'Машина'    , dataIndex: 'truck'},
+                    { text: 'Перевозчик', dataIndex: 'carrier', width: 200},
+                    { text: 'Простой'   , dataIndex: 'idle_reason'},
+                    { text: 'Коментарий', dataIndex: 'comment'      , flex: 1, editor: 'textfield' }
+                ],
+                plugins: [ ],
+                dockedItems: [
+                    {
+                        xtype: 'toolbar',
+                        items: [ {text: 'Новая', iconCls: 'icon-add',
+                                  handler: function() { store.insert(0, new Conveyances()); edt.startEdit(0, 0);}
+                                 }
+                               ]
+                    }]
+        });
+    })
+        
+    </script>
 {% endblock %}
 
 {% block content %}
