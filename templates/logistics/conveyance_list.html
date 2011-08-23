@@ -37,17 +37,15 @@
                 width: 1000,
                 height: 300,
                 title: 'Перевозки',
-                features: [
-                    {  ftype: 'grouping'}
-                ],
+                features: [ ],
                 columns: [
-                    { text: 'В пути?'   , dataIndex: 'is_active'},
-                    { text: 'Машина'    , dataIndex: 'truck'},
-                    { text: 'Перевозчик', dataIndex: 'carrier', width: 200},
-                    { text: 'Простой'   , dataIndex: 'idle_reason'},
-                    { text: 'Коментарий', dataIndex: 'comment'      , flex: 1, editor: 'textfield' }
+                    { text: 'В пути?'   , dataIndex: 'is_active'  , editor: 'textfield'            },
+                    { text: 'Машина'    , dataIndex: 'truck'      , editor: 'textfield'            },
+                    { text: 'Перевозчик', dataIndex: 'carrier'    , editor: 'textfield', width: 200},
+                    { text: 'Простой'   , dataIndex: 'idle_reason', editor: 'textfield'            },
+                    { text: 'Коментарий', dataIndex: 'comment'    , editor: 'textfield', flex: 1   }
                 ],
-                plugins: [ ],
+                plugins: [edt ],
                 dockedItems: [
                     {
                         xtype: 'toolbar',
