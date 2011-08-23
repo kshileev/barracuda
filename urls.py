@@ -16,7 +16,7 @@ urlpatterns = patterns('',
 )
 
 urlpatterns += patterns('',
-    url(r'^logistics/conveyances/$', ListView.as_view(model=Conveyance,context_object_name='conveyance_list')),
-    url(r'^logistics/warehouses/$', ListView.as_view(model=Warehouse,context_object_name='warehouse_list')),
-    url(r'^logistics/customs/$', ListView.as_view(model=Customs,context_object_name='customs_list'))
+    url(r'^logistics/conveyances/$', login_required(ListView.as_view(model=Conveyance,context_object_name='conveyance_list'))),
+    url(r'^logistics/warehouses/$', login_required(ListView.as_view(model=Warehouse,context_object_name='warehouse_list'))),
+    url(r'^logistics/customs/$', login_required(ListView.as_view(model=Customs,context_object_name='customs_list')))
 )
