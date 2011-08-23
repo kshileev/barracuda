@@ -85,7 +85,7 @@ class CCD(models.Model):
         verbose_name_plural = 'ГТД'
 
     #we have few CCD per conveyance
-    conveyance = models.OneToOneField(Conveyance, verbose_name = 'перевозка', null = False)
+    conveyance = models.ManyToManyField(Conveyance, verbose_name = 'перевозка', null = False)
 
     customs = models.ForeignKey(Customs, verbose_name='таможня')
     date = models.DateField(verbose_name = 'дата')
