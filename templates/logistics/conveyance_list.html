@@ -4,7 +4,10 @@
 {% block additional_js %}
     {{ block.super }}
     <link rel="stylesheet" type="text/css" href='{{ STATIC_URL }}css/ext-all.css'/>
-    <script type="text/javascript" src="{{ STATIC_URL }}js/extjs/ext-all.js"></script>
+    <script type="text/javascript" src="{{ STATIC_URL }}js/ext-all.js"></script>
+    <style type="text/css">
+        .icon-add {background-image: url("{{ STATIC_URL }}img/add.png")}
+    </style>
     <script type="text/javascript">
 
         Ext.require(['Ext.grid.*', 'Ext.data.*', 'Ext.panel.*']);
