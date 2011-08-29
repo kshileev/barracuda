@@ -1,282 +1,291 @@
 [
-    {
-        "pk": 1,
-        "model": "logistics.conveyance",
-        "fields": {
-            "comment": "\u041d\u0435\u0442 \u043d\u0438\u043a\u0430\u043a\u043e\u0433\u043e \u043e\u0431\u044f\u0437\u0430\u0442\u0435\u043b\u044c\u043d\u043e\u0433\u043e \u0442\u0435\u043a\u0441\u0442\u0430",
-            "is_active": true,
-            "idle_reason": "\u0432\u043e\u0434\u0438\u0442\u0435\u043b\u044c \u0441\u043f\u0438\u043b\u0441\u044f",
-            "carrier": 2,
-            "truck": "X710NC 150"
-        }
-    },
-    {
-        "pk": 2,
-        "model": "logistics.conveyance",
-        "fields": {
-            "comment": "",
-            "is_active": true,
-            "idle_reason": "",
-            "carrier": 1,
-            "truck": "BN301GJ"
-        }
-    },
-    {
-        "pk": 3,
-        "model": "logistics.conveyance",
-        "fields": {
-            "comment": "",
-            "is_active": true,
-            "idle_reason": "",
-            "carrier": 2,
-            "truck": "C500CC177"
-        }
-    },
-    {
-        "pk": 1,
-        "model": "logistics.conveyancepoint",
-        "fields": {
-            "timestamp": "2011-03-08 12:00:00",
-            "conveyance": 1,
-            "type": "LOAD",
-            "location": "DE"
-        }
-    },
-    {
-        "pk": 2,
-        "model": "logistics.conveyancepoint",
-        "fields": {
-            "timestamp": "2011-03-09 03:25:27",
-            "conveyance": 1,
-            "type": "CSAR",
-            "location": "RU"
-        }
-    },
-    {
-        "pk": 3,
-        "model": "logistics.conveyancepoint",
-        "fields": {
-            "timestamp": "2011-03-09 12:00:00",
-            "conveyance": 1,
-            "type": "CSDP",
-            "location": "RU"
-        }
-    },
-    {
-        "pk": 4,
-        "model": "logistics.conveyancepoint",
-        "fields": {
-            "timestamp": "2011-03-10 12:00:00",
-            "conveyance": 1,
-            "type": "ULAR",
-            "location": "RU"
-        }
-    },
-    {
-        "pk": 5,
-        "model": "logistics.conveyancepoint",
-        "fields": {
-            "timestamp": "2011-03-10 13:00:00",
-            "conveyance": 1,
-            "type": "UL",
-            "location": "RU"
-        }
-    },
-    {
-        "pk": 6,
-        "model": "logistics.conveyancepoint",
-        "fields": {
-            "timestamp": "2011-05-05 19:08:59",
-            "conveyance": 2,
-            "type": "LOAD",
-            "location": "IT"
-        }
-    },
-    {
-        "pk": 7,
-        "model": "logistics.conveyancepoint",
-        "fields": {
-            "timestamp": "2011-05-09 06:00:00",
-            "conveyance": 2,
-            "type": "CSAR",
-            "location": "RU"
-        }
-    },
-    {
-        "pk": 8,
-        "model": "logistics.conveyancepoint",
-        "fields": {
-            "timestamp": "2011-05-09 19:12:19",
-            "conveyance": 3,
-            "type": "LOAD",
-            "location": "DE"
-        }
-    },
-    {
-        "pk": 1,
-        "model": "logistics.warehouse",
-        "fields": {
-            "phone": "\u0412\u044b\u0434\u0443\u043c\u0430\u043d\u043d\u044b\u0439 \u0442\u0435\u043b\u0435\u0444\u043e\u043d",
-            "name": "\u0412\u044b\u0434\u0443\u043c\u0430\u043d\u043d\u044b\u0439 \u0441\u043a\u043b\u0430\u0434",
-            "address": "\u0412\u044b\u0434\u0443\u043c\u0430\u043d\u043d\u044b\u0439 \u0430\u0434\u0440\u0435\u0441"
-        }
-    },
-    {
-        "pk": 2,
-        "model": "logistics.warehouse",
-        "fields": {
-            "phone": "\u0412\u044b\u0434\u0443\u043c\u0430\u043d\u043d\u044b\u0439 \u0442\u0435\u043b\u0435\u0444\u043e\u043d",
-            "name": "\u0421\u043a\u043b\u0430\u0434 1",
-            "address": "\u0410\u0434\u0440\u0435\u0441 \u0441\u043a\u043b\u0430\u0434\u0430 1"
-        }
-    },
-    {
-        "pk": 3,
-        "model": "logistics.warehouse",
-        "fields": {
-            "phone": "\u0412\u044b\u0434\u0443\u043c\u0430\u043d\u043d\u044b\u0439 \u0442\u0435\u043b\u0435\u0444\u043e\u043d",
-            "name": "\u0421\u043a\u043b\u0430\u0434 2 ",
-            "address": "\u0410\u0434\u0440\u0435\u0441 \u0441\u043a\u043b\u0430\u0434\u0430 2"
-        }
-    },
-    {
-        "pk": 1,
-        "model": "logistics.customs",
-        "fields": {
-            "fax": "(08343)3-04-27",
-            "name": "\u0442/\u043f \u041d\u043e\u0432\u043e\u0437\u044b\u0431\u043a\u043e\u0432\u0441\u043a\u0438\u0439",
-            "url": "http://www.tamognia.ru/customs/post/detail.php?ID=1023665",
-            "number": 10102070,
-            "phone": "(08343)3-04-27",
-            "address": "243000 \u0411\u0440\u044f\u043d\u0441\u043a\u0430\u044f \u043e\u0431\u043b., \u0433. \u041d\u043e\u0432\u043e\u0437\u044b\u0431\u043a\u043e\u0432, \u0443\u043b. \u0412\u043e\u043a\u0437\u0430\u043b\u044c\u043d\u0430\u044f, \u0434. 33"
-        }
-    },
-    {
-        "pk": 2,
-        "model": "logistics.customs",
-        "fields": {
-            "fax": "(81278) 12-679,59321",
-            "name": "\u0442/\u043f \u0412\u044b\u0431\u043e\u0440\u0433\u0441\u043a\u0438\u0439",
-            "url": "http://www.tamognia.ru/customs/post/detail.php?ID=1059537",
-            "number": 10206080,
-            "phone": "(81278) 59-253,59321",
-            "address": "188900 \u041b\u0435\u043d\u0438\u043d\u0433\u0440\u0430\u0434\u0441\u043a\u0430\u044f \u043e\u0431\u043b., \u0433. \u0412\u044b\u0431\u043e\u0440\u0433, \u041b\u0435\u043d\u0438\u043d\u0433\u0440\u0430\u0434\u0441\u043a\u043e\u0435 \u0448., \u0434. 110"
-        }
-    },
-    {
-        "pk": 3,
-        "model": "logistics.customs",
-        "fields": {
-            "fax": "\u043d\u0435 \u0438\u0437\u0432\u0435\u0441\u0442\u0435\u043d",
-            "name": "\u041e\u0422\u041e \u0438 \u0422\u041a \u21162 \u0412\u044b\u0431\u043e\u0440\u0433\u0441\u043a\u043e\u0433\u043e \u0442/\u043f\t",
-            "url": "http://www.customs.ru/ru/ved_info/popup.php?submitSearch=1&ref=skladbx&f1a286=10206082&f2a286=&f4a28",
-            "number": 10206082,
-            "phone": "\u043d\u0435 \u0438\u0437\u0432\u0435\u0441\u0442\u0435\u043d",
-            "address": "188991 \u0412\u042b\u0411\u041e\u0420\u0413 188991 \u041b\u0415\u041d\u0418\u041d\u0413\u0420\u0410\u0414\u0421\u041a\u0410\u042f \u041e\u0411\u041b., \u0413.\u0412\u042b\u0411\u041e\u0420\u0413, \u0423\u041b.\u0412\u041e\u0417\u041d\u0415\u0421\u0415\u041d\u0421\u041a\u0410\u042f, \u0414.2\t"
-        }
-    },
-    {
-        "pk": 1,
-        "model": "logistics.ccd",
-        "fields": {
-            "exporter": 1,
-            "total_sum": "236079.03",
-            "country": "DE",
-            "customs": 3,
-            "currency": "USD",
-            "importer": 2,
-            "conveyance": 1,
-            "truck": "X719NC 150",
-            "corrected_cost": "1021084.93",
-            "date": "2011-03-09",
-            "exchange_rate": "28.1717",
-            "unique_number": 1606
-        }
-    },
-    {
-        "pk": 2,
-        "model": "logistics.ccd",
-        "fields": {
-            "exporter": 1,
-            "total_sum": "10000",
-            "country": "DE",
-            "customs": 1,
-            "currency": "USD",
-            "importer": 2,
-            "conveyance": 2,
-            "truck": "BN301GJ",
-            "corrected_cost": "0",
-            "date": "2011-05-09",
-            "exchange_rate": "28.9897",
-            "unique_number": 123456
-        }
-    },
-    {
-        "pk": 1,
-        "model": "logistics.cargoexpensetype",
-        "fields": {
-            "name": "\u043f\u0430\u0440\u043e\u043c"
-        }
-    },
-    {
-        "pk": 2,
-        "model": "logistics.cargoexpensetype",
-        "fields": {
-            "name": "\u0432\u0437\u044f\u0442\u043a\u0430 \u0442\u0430\u043c\u043e\u0436\u0435\u043d\u043d\u0438\u043a\u0443"
-        }
-    },
-    {
-        "pk": 3,
-        "model": "logistics.cargoexpensetype",
-        "fields": {
-            "name": "\u043f\u043b\u0430\u0442\u043d\u044b\u0439 \u0430\u0432\u0442\u043e\u0431\u0430\u043d"
-        }
-    },
-    {
-        "pk": 4,
-        "model": "logistics.cargoexpensetype",
-        "fields": {
-            "name": "\u043f\u043b\u0430\u0442\u043d\u044b\u0439 \u0442\u0443\u043d\u043d\u0435\u043b\u044c"
-        }
-    },
-    {
-        "pk": 5,
-        "model": "logistics.cargoexpensetype",
-        "fields": {
-            "name": "\u043f\u043b\u0430\u0442\u043d\u044b\u0439 \u043c\u043e\u0441\u0442"
-        }
-    },
-    {
-        "pk": 1,
-        "model": "logistics.cargoexpense",
-        "fields": {
-            "cargo": 1,
-            "amount": "57",
-            "type": 3,
-            "payment": "cash",
-            "currency": "EUR"
-        }
-    },
-    {
-        "pk": 2,
-        "model": "logistics.cargoexpense",
-        "fields": {
-            "cargo": 2,
-            "amount": "32",
-            "type": 3,
-            "payment": "cash",
-            "currency": "EUR"
-        }
-    },
-    {
-        "pk": 3,
-        "model": "logistics.cargoexpense",
-        "fields": {
-            "cargo": 2,
-            "amount": "140",
-            "type": 1,
-            "payment": "cash",
-            "currency": "EUR"
-        }
-    }
+   {
+      "pk": 1, 
+      "model": "logistics.conveyance", 
+      "fields": {
+         "comment": "\u041d\u0435\u0442 \u043d\u0438\u043a\u0430\u043a\u043e\u0433\u043e \u043e\u0431\u044f\u0437\u0430\u0442\u0435\u043b\u044c\u043d\u043e\u0433\u043e \u0442\u0435\u043a\u0441\u0442\u0430", 
+         "is_active": true, 
+         "idle_reason": "\u0432\u043e\u0434\u0438\u0442\u0435\u043b\u044c \u0441\u043f\u0438\u043b\u0441\u044f", 
+         "carrier": 2, 
+         "truck": "X710NC 150"
+      }
+   }, 
+   {
+      "pk": 2, 
+      "model": "logistics.conveyance", 
+      "fields": {
+         "comment": "\u0433\u0434\u0435 \u0442\u043e", 
+         "is_active": true, 
+         "idle_reason": "\u0447\u0442\u043e \u0442\u043e", 
+         "carrier": 1, 
+         "truck": "BN301GJ"
+      }
+   }, 
+   {
+      "pk": 3, 
+      "model": "logistics.conveyance", 
+      "fields": {
+         "comment": "\u0445\u0438\u0445\u0438", 
+         "is_active": true, 
+         "idle_reason": "\u0445\u0430\u0445\u0430", 
+         "carrier": 2, 
+         "truck": "C500CC177"
+      }
+   }, 
+   {
+      "pk": 1, 
+      "model": "logistics.conveyancepoint", 
+      "fields": {
+         "timestamp": "2011-03-08 12:00:00", 
+         "conveyance": 1, 
+         "type": "LOAD", 
+         "location": "DE"
+      }
+   }, 
+   {
+      "pk": 2, 
+      "model": "logistics.conveyancepoint", 
+      "fields": {
+         "timestamp": "2011-03-09 03:25:27", 
+         "conveyance": 1, 
+         "type": "CSAR", 
+         "location": "RU"
+      }
+   }, 
+   {
+      "pk": 3, 
+      "model": "logistics.conveyancepoint", 
+      "fields": {
+         "timestamp": "2011-03-09 12:00:00", 
+         "conveyance": 1, 
+         "type": "CSDP", 
+         "location": "RU"
+      }
+   }, 
+   {
+      "pk": 4, 
+      "model": "logistics.conveyancepoint", 
+      "fields": {
+         "timestamp": "2011-03-10 12:00:00", 
+         "conveyance": 1, 
+         "type": "ULAR", 
+         "location": "RU"
+      }
+   }, 
+   {
+      "pk": 5, 
+      "model": "logistics.conveyancepoint", 
+      "fields": {
+         "timestamp": "2011-03-10 13:00:00", 
+         "conveyance": 1, 
+         "type": "UL", 
+         "location": "RU"
+      }
+   }, 
+   {
+      "pk": 6, 
+      "model": "logistics.conveyancepoint", 
+      "fields": {
+         "timestamp": "2011-05-05 19:08:59", 
+         "conveyance": 2, 
+         "type": "LOAD", 
+         "location": "IT"
+      }
+   }, 
+   {
+      "pk": 7, 
+      "model": "logistics.conveyancepoint", 
+      "fields": {
+         "timestamp": "2011-05-09 06:00:00", 
+         "conveyance": 2, 
+         "type": "CSAR", 
+         "location": "RU"
+      }
+   }, 
+   {
+      "pk": 8, 
+      "model": "logistics.conveyancepoint", 
+      "fields": {
+         "timestamp": "2011-05-09 19:12:19", 
+         "conveyance": 3, 
+         "type": "LOAD", 
+         "location": "DE"
+      }
+   }, 
+   {
+      "pk": 1, 
+      "model": "logistics.warehouse", 
+      "fields": {
+         "phone": "\u0412\u044b\u0434\u0443\u043c\u0430\u043d\u043d\u044b\u0439 \u0442\u0435\u043b\u0435\u0444\u043e\u043d", 
+         "name": "\u0412\u044b\u0434\u0443\u043c\u0430\u043d\u043d\u044b\u0439 \u0441\u043a\u043b\u0430\u0434", 
+         "address": "\u0412\u044b\u0434\u0443\u043c\u0430\u043d\u043d\u044b\u0439 \u0430\u0434\u0440\u0435\u0441"
+      }
+   }, 
+   {
+      "pk": 2, 
+      "model": "logistics.warehouse", 
+      "fields": {
+         "phone": "\u0412\u044b\u0434\u0443\u043c\u0430\u043d\u043d\u044b\u0439 \u0442\u0435\u043b\u0435\u0444\u043e\u043d", 
+         "name": "\u0421\u043a\u043b\u0430\u0434 1", 
+         "address": "\u0410\u0434\u0440\u0435\u0441 \u0441\u043a\u043b\u0430\u0434\u0430 1"
+      }
+   }, 
+   {
+      "pk": 3, 
+      "model": "logistics.warehouse", 
+      "fields": {
+         "phone": "\u0412\u044b\u0434\u0443\u043c\u0430\u043d\u043d\u044b\u0439 \u0442\u0435\u043b\u0435\u0444\u043e\u043d", 
+         "name": "\u0421\u043a\u043b\u0430\u0434 2 ", 
+         "address": "\u0410\u0434\u0440\u0435\u0441 \u0441\u043a\u043b\u0430\u0434\u0430 2"
+      }
+   }, 
+   {
+      "pk": 4, 
+      "model": "logistics.warehouse", 
+      "fields": {
+         "phone": "123123", 
+         "name": "superware", 
+         "address": "addr"
+      }
+   }, 
+   {
+      "pk": 1, 
+      "model": "logistics.customs", 
+      "fields": {
+         "fax": "(08343)3-04-27", 
+         "name": "\u0442/\u043f \u041d\u043e\u0432\u043e\u0437\u044b\u0431\u043a\u043e\u0432\u0441\u043a\u0438\u0439", 
+         "url": "http://www.tamognia.ru/customs/post/detail.php?ID=1023665", 
+         "number": 10102070, 
+         "phone": "(08343)3-04-27", 
+         "address": "243000 \u0411\u0440\u044f\u043d\u0441\u043a\u0430\u044f \u043e\u0431\u043b., \u0433. \u041d\u043e\u0432\u043e\u0437\u044b\u0431\u043a\u043e\u0432, \u0443\u043b. \u0412\u043e\u043a\u0437\u0430\u043b\u044c\u043d\u0430\u044f, \u0434. 33"
+      }
+   }, 
+   {
+      "pk": 2, 
+      "model": "logistics.customs", 
+      "fields": {
+         "fax": "(81278) 12-679,59321", 
+         "name": "\u0442/\u043f \u0412\u044b\u0431\u043e\u0440\u0433\u0441\u043a\u0438\u0439", 
+         "url": "http://www.tamognia.ru/customs/post/detail.php?ID=1059537", 
+         "number": 10206080, 
+         "phone": "(81278) 59-253,59321", 
+         "address": "188900 \u041b\u0435\u043d\u0438\u043d\u0433\u0440\u0430\u0434\u0441\u043a\u0430\u044f \u043e\u0431\u043b., \u0433. \u0412\u044b\u0431\u043e\u0440\u0433, \u041b\u0435\u043d\u0438\u043d\u0433\u0440\u0430\u0434\u0441\u043a\u043e\u0435 \u0448., \u0434. 110"
+      }
+   }, 
+   {
+      "pk": 3, 
+      "model": "logistics.customs", 
+      "fields": {
+         "fax": "\u043d\u0435 \u0438\u0437\u0432\u0435\u0441\u0442\u0435\u043d", 
+         "name": "\u041e\u0422\u041e \u0438 \u0422\u041a \u21162 \u0412\u044b\u0431\u043e\u0440\u0433\u0441\u043a\u043e\u0433\u043e \u0442/\u043f\t", 
+         "url": "http://www.customs.ru/ru/ved_info/popup.php?submitSearch=1&ref=skladbx&f1a286=10206082&f2a286=&f4a28", 
+         "number": 10206082, 
+         "phone": "\u043d\u0435 \u0438\u0437\u0432\u0435\u0441\u0442\u0435\u043d", 
+         "address": "188991 \u0412\u042b\u0411\u041e\u0420\u0413 188991 \u041b\u0415\u041d\u0418\u041d\u0413\u0420\u0410\u0414\u0421\u041a\u0410\u042f \u041e\u0411\u041b., \u0413.\u0412\u042b\u0411\u041e\u0420\u0413, \u0423\u041b.\u0412\u041e\u0417\u041d\u0415\u0421\u0415\u041d\u0421\u041a\u0410\u042f, \u0414.2\t"
+      }
+   }, 
+   {
+      "pk": 1, 
+      "model": "logistics.ccd", 
+      "fields": {
+         "exporter": 1, 
+         "total_sum": "236079.03", 
+         "country": "DE", 
+         "customs": 3, 
+         "currency": "USD", 
+         "importer": 2, 
+         "conveyance": 1, 
+         "truck": "X719NC 150", 
+         "corrected_cost": "1021084.93", 
+         "date": "2011-03-09", 
+         "exchange_rate": "28.1717", 
+         "unique_number": 1606
+      }
+   }, 
+   {
+      "pk": 2, 
+      "model": "logistics.ccd", 
+      "fields": {
+         "exporter": 1, 
+         "total_sum": "10000", 
+         "country": "DE", 
+         "customs": 1, 
+         "currency": "USD", 
+         "importer": 2, 
+         "conveyance": 2, 
+         "truck": "BN301GJ", 
+         "corrected_cost": "0", 
+         "date": "2011-05-09", 
+         "exchange_rate": "28.9897", 
+         "unique_number": 123456
+      }
+   }, 
+   {
+      "pk": 1, 
+      "model": "logistics.cargoexpensetype", 
+      "fields": {
+         "name": "\u043f\u0430\u0440\u043e\u043c"
+      }
+   }, 
+   {
+      "pk": 2, 
+      "model": "logistics.cargoexpensetype", 
+      "fields": {
+         "name": "\u0432\u0437\u044f\u0442\u043a\u0430 \u0442\u0430\u043c\u043e\u0436\u0435\u043d\u043d\u0438\u043a\u0443"
+      }
+   }, 
+   {
+      "pk": 3, 
+      "model": "logistics.cargoexpensetype", 
+      "fields": {
+         "name": "\u043f\u043b\u0430\u0442\u043d\u044b\u0439 \u0430\u0432\u0442\u043e\u0431\u0430\u043d"
+      }
+   }, 
+   {
+      "pk": 4, 
+      "model": "logistics.cargoexpensetype", 
+      "fields": {
+         "name": "\u043f\u043b\u0430\u0442\u043d\u044b\u0439 \u0442\u0443\u043d\u043d\u0435\u043b\u044c"
+      }
+   }, 
+   {
+      "pk": 5, 
+      "model": "logistics.cargoexpensetype", 
+      "fields": {
+         "name": "\u043f\u043b\u0430\u0442\u043d\u044b\u0439 \u043c\u043e\u0441\u0442"
+      }
+   }, 
+   {
+      "pk": 1, 
+      "model": "logistics.cargoexpense", 
+      "fields": {
+         "cargo": 1, 
+         "amount": "57", 
+         "type": 3, 
+         "payment": "cash", 
+         "currency": "EUR"
+      }
+   }, 
+   {
+      "pk": 2, 
+      "model": "logistics.cargoexpense", 
+      "fields": {
+         "cargo": 2, 
+         "amount": "32", 
+         "type": 3, 
+         "payment": "cash", 
+         "currency": "EUR"
+      }
+   }, 
+   {
+      "pk": 3, 
+      "model": "logistics.cargoexpense", 
+      "fields": {
+         "cargo": 2, 
+         "amount": "140", 
+         "type": 1, 
+         "payment": "cash", 
+         "currency": "EUR"
+      }
+   }
 ]

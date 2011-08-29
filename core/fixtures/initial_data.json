@@ -560,8 +560,8 @@
         "model": "auth.user",
         "fields": {
             "username": "kshileev",
-            "first_name": "",
-            "last_name": "",
+            "first_name": "Kirill",
+            "last_name": "Shileev",
             "is_active": true,
             "is_superuser": true,
             "is_staff": true,

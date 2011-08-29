@@ -4,6 +4,7 @@ import models
 admin.site.register(models.CargoExpenseType)
 admin.site.register(models.Customs)
 admin.site.register(models.Warehouse)
+admin.site.register(models.CCD)
 
 class ConveyancePointInline(admin.TabularInline):
     model = models.ConveyancePoint
