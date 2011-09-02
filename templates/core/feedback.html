@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+    {% if form.is_bound and form.is_valid %}
+        <h2>Спасибо!</h2>
+    {% else %}
+        <form action="" method="POST">
+            {% csrf_token %}
+            <table>
+                {{ form.as_table }}
+            </table>
+            <input type="submit" value="Отправить">
+        </form>
+    {% endif %}
+{% endblock %}
